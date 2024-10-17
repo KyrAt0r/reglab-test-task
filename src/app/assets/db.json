@@ -1,0 +1,150 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "login": "test",
+      "password": "test",
+      "is_online": true
+    },
+    {
+      "id": 1,
+      "login": "ivan",
+      "password": "пароль1",
+      "is_online": true
+    },
+    {
+      "id": 2,
+      "login": "anna",
+      "password": "пароль2",
+      "is_online": false
+    },
+    {
+      "id": 3,
+      "login": "sergey",
+      "password": "пароль3",
+      "is_online": true
+    },
+    {
+      "id": 4,
+      "login": "maria",
+      "password": "пароль4",
+      "is_online": false
+    },
+    {
+      "id": 5,
+      "login": "nikolay",
+      "password": "пароль5",
+      "is_online": true
+    }
+  ],
+  "channels": [
+    {
+      "id": 1,
+      "name": "Общий чат"
+    },
+    {
+      "id": 2,
+      "name": "Разработка"
+    },
+    {
+      "id": 3,
+      "name": "Развлечения"
+    },
+    {
+      "id": 4,
+      "name": "Новости"
+    }
+  ],
+  "messages": [
+    {
+      "id": 101,
+      "from_user": 1,
+      "channel_id": 1,
+      "content": "Всем привет! Как дела?"
+    },
+    {
+      "id": 102,
+      "from_user": 2,
+      "channel_id": 1,
+      "content": "Привет, Иван! Всё хорошо, спасибо. А у тебя?"
+    },
+    {
+      "id": 103,
+      "from_user": 3,
+      "channel_id": 2,
+      "content": "Ребята, кто-нибудь разобрался с новым API?"
+    },
+    {
+      "id": 104,
+      "from_user": 5,
+      "channel_id": 3,
+      "content": "Кто смотрел последний фильм? Стоит ли смотреть?"
+    },
+    {
+      "id": 105,
+      "from_user": 4,
+      "channel_id": 4,
+      "content": "Сегодня вышла новая версия Angular!"
+    },
+    {
+      "id": 106,
+      "from_user": 1,
+      "channel_id": 2,
+      "content": "API выглядит сложно, но я нашёл пару хороших статей. Могу скинуть ссылки."
+    },
+    {
+      "id": 107,
+      "from_user": 3,
+      "channel_id": 1,
+      "content": "Кто сегодня в офисе? Нужно обсудить проект."
+    },
+    {
+      "id": 108,
+      "from_user": 5,
+      "channel_id": 3,
+      "content": "Я смотрел фильм, очень советую!"
+    }
+  ],
+  "user_channels": [
+    {
+      "user_id": 1,
+      "channel_id": 1
+    },
+    {
+      "user_id": 1,
+      "channel_id": 2
+    },
+    {
+      "user_id": 1,
+      "channel_id": 3
+    },
+    {
+      "user_id": 2,
+      "channel_id": 1
+    },
+    {
+      "user_id": 2,
+      "channel_id": 3
+    },
+    {
+      "user_id": 3,
+      "channel_id": 2
+    },
+    {
+      "user_id": 3,
+      "channel_id": 1
+    },
+    {
+      "user_id": 4,
+      "channel_id": 4
+    },
+    {
+      "user_id": 5,
+      "channel_id": 1
+    },
+    {
+      "user_id": 5,
+      "channel_id": 3
+    }
+  ]
+}

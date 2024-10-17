@@ -1,0 +1,47 @@
+<div class="auth-container">
+  <p-card class="auth-box" header="Авторизация" [style]="{ width: '300px' }">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-row">
+        <p-floatLabel>
+          <input
+            id="username"
+            type="text"
+            pInputText
+            formControlName="username"
+            aria-describedby="username-help"
+            [ngClass]="{'ng-invalid ng-dirty': username?.invalid && username?.touched}"
+          />
+          <label for="username">Имя пользователя</label>
+        </p-floatLabel>
+        <small
+          *ngIf="username?.invalid && username?.touched && username?.errors?.['required']"
+          id="username-help"
+          class="p-error"
+        >
+          Имя пользователя обязательно
+        </small>
+      </div>
+
+      <div class="form-row">
+        <p-floatLabel>
+          <p-password formControlName="password"  [feedback]="false" [style]="{width: '100%'}"/>
+          <label for="password">Пароль</label>
+        </p-floatLabel>
+        <small *ngIf="password?.invalid && password?.touched && password?.errors?.['required']" class="p-error">
+          Пароль обязателен
+        </small>
+        <small *ngIf="password?.invalid && password?.touched && password?.errors?.['minlength']" class="p-error">
+          Пароль должен быть не <br />менее 3 символов
+        </small>
+      </div>
+
+      <div class="form-row error-message-row">
+        <small *ngIf="errorMessage" class="p-error">{{ errorMessage }}</small>
+      </div>
+
+      <div class="form-row">
+        <p-button label="Войти" type="submit" [disabled]="loginForm.invalid" icon="pi pi-sign-in" iconPos="right"></p-button>
+      </div>
+    </form>
+  </p-card>
+</div>

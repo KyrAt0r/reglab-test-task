@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  height: calc(100% - 100px);
+}
+
+.list-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+p-scrollPanel {
+  flex-grow: 1;
+  margin-bottom: 10px; /* Немного отступа от кнопки (опционально) */
+}
+
+.container-list {
+  width: 100%;
+}
+
+.button-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  width: 100%;
+}
+
+.button-link:hover {
+  background-color: #23272A;
+}
+
+.button-link:active {
+  background-color: #7289DA;
+}
+
+.disabled {
+  pointer-events: none;
+}

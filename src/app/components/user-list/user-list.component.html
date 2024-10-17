@@ -1,0 +1,9 @@
+<div class="label">Пользователи</div>
+<app-list
+  *ngIf="listSource.length > 0"
+  [items]="listSource"
+></app-list>
+<div *ngIf="listSource.length === 0">
+  В чате нет пользователй
+</div>
+<p-button label="Добавить пользователя" icon="pi pi-plus" size="small"/>

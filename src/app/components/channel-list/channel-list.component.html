@@ -1,0 +1,10 @@
+<div class="label">Каналы</div>
+<app-list
+  *ngIf="listChannels.length > 0"
+  [items]="listChannels"
+  [interact]="true"
+></app-list>
+<div *ngIf="listChannels.length === 0">
+  У вас пока нет чатов
+</div>
+<p-button label="Добавить канал" icon="pi pi-plus" size="small"/>

@@ -1,0 +1,15 @@
+.messages {
+  overflow-y: auto;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+.new-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
