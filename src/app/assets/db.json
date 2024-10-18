@@ -2,37 +2,37 @@
   "users": [
     {
       "id": 0,
-      "login": "test",
+      "username": "test",
       "password": "test",
       "is_online": true
     },
     {
       "id": 1,
-      "login": "ivan",
+      "username": "ivan",
       "password": "пароль1",
       "is_online": true
     },
     {
       "id": 2,
-      "login": "anna",
+      "username": "anna",
       "password": "пароль2",
       "is_online": false
     },
     {
       "id": 3,
-      "login": "sergey",
+      "username": "sergey",
       "password": "пароль3",
       "is_online": true
     },
     {
       "id": 4,
-      "login": "maria",
+      "username": "maria",
       "password": "пароль4",
       "is_online": false
     },
     {
       "id": 5,
-      "login": "nikolay",
+      "username": "nikolay",
       "password": "пароль5",
       "is_online": true
     }
@@ -103,6 +103,72 @@
       "from_user": 5,
       "channel_id": 3,
       "content": "Я смотрел фильм, очень советую!"
+    },
+    {
+      "id": 1729243239908,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "Очень ооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооочень длинное сообщение"
+    },
+    {
+      "id": 1729243816925,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "43242"
+    },
+    {
+      "id": 1729243819979,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "423423"
+    },
+    {
+      "id": 1729244755337,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "432423"
+    },
+    {
+      "id": 1729244780483,
+      "from_user": 0,
+      "channel_id": 3,
+      "content": "О я тоже видел его"
+    },
+    {
+      "id": 1729244795464,
+      "from_user": 0,
+      "channel_id": 4,
+      "content": "Нет!!! Вчера"
+    },
+    {
+      "id": 1729245393026,
+      "from_user": 0,
+      "channel_id": 4,
+      "content": "4"
+    },
+    {
+      "id": 1729245615433,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "ку"
+    },
+    {
+      "id": 1729245618061,
+      "from_user": 0,
+      "channel_id": 4,
+      "content": "кукук"
+    },
+    {
+      "id": 1729245673842,
+      "from_user": 2,
+      "channel_id": 3,
+      "content": " оп оп тестируем сообщения"
+    },
+    {
+      "id": 1729245687325,
+      "from_user": 0,
+      "channel_id": 3,
+      "content": "Всё класс, вижу прекрстно"
     }
   ],
   "user_channels": [

@@ -18,10 +18,10 @@ export class AuthService {
     }
   }
 
-  login(login: string, password: string): Observable<boolean> {
+  login(username: string, password: string): Observable<boolean> {
     return this.http.get<User[]>(this.apiUrl).pipe(
       map(users => {
-        const user = users.find(u => u.login === login && u.password === password);
+        const user = users.find(u => u.username === username && u.password === password);
         if (user) {
           sessionStorage.setItem('authenticatedUser', JSON.stringify(user));
           return true;

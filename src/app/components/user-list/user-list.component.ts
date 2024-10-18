@@ -4,6 +4,7 @@ import {MatButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatList, MatListItem} from '@angular/material/list';
 import {DomSanitizer} from '@angular/platform-browser';
+import type {User} from '@interfaces/user';
 import {Button} from 'primeng/button';
 import {UserService} from '@services/user.service';
 import {ListSource} from '@interfaces/list-source';
@@ -40,10 +41,10 @@ export class UserListComponent implements OnInit {
     });
   }
 
-  parseUsers(users: any[]): ListSource[] {
+  parseUsers(users: User[]): ListSource[] {
     return users.map(user => ({
       id: user.id,
-      name: user.login,
+      name: user.username,
       icon: this.sanitizer.bypassSecurityTrustHtml(
         user.is_online
           ? '<i class="pi pi-circle-fill" style="color: green"></i>'

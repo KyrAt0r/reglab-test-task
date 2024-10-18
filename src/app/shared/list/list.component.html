@@ -1,10 +1,14 @@
 <p-scrollPanel [style]="{height: '100%'}" styleClass="custombar1">
   <div class="container-list" role="list">
     <div class="list-item" role="listitem" *ngFor="let item of items">
-      <a href="#" class="item button-link"
-         [ngClass]="{'disabled': !interact}"
-         [attr.aria-disabled]="!interact ? true : null"
-         [attr.tabindex]="!interact ? '-1' : null">
+      <a
+        class="item button-link"
+        [ngClass]="{'disabled': !interact}"
+        [attr.aria-disabled]="!interact ? true : null"
+        [attr.tabindex]="!interact ? '-1' : null"
+        [routerLink]="['/']"
+        [queryParams]="{ channelId: item.id }"
+        queryParamsHandling="merge">
         <span [innerHTML]="item.icon"></span>
         {{ item.name }}
       </a>

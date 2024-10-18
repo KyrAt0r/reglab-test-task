@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatFabButton, MatIconButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import {User} from '@interfaces/user';
+import {UserService} from '@services/user.service';
 import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
 import { ButtonGroupModule } from 'primeng/buttongroup';
@@ -22,14 +24,14 @@ import {AuthService} from '@services/auth.service';
   ],
 })
 export class PersonalUserPanelComponent implements OnInit {
-  userName: string | null = null;
+  user: User;
 
-  constructor(private authService: AuthService) {}
-
-  ngOnInit(): void {
-    const authenticatedUser = sessionStorage.getItem('authenticatedUser');
-    this.userName = authenticatedUser ? JSON.parse(authenticatedUser).login : 'Guest';
+  constructor(private authService: AuthService,  private userService: UserService) {
+    this.user = this.userService.getUser();
+    console.log(this.user)
   }
+
+  ngOnInit(): void {}
 
   // Метод для выхода из системы
   logout(): void {
