@@ -33,7 +33,6 @@ import {ListComponent} from '@shared/list/list.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChannelListComponent implements OnInit {
-  channels: any[] = [];
   listChannels: ListSource[] = [];
 
   private channelService = inject(ChannelService);
@@ -43,7 +42,6 @@ export class ChannelListComponent implements OnInit {
   ngOnInit(): void {
     this.channelService.getChannels().subscribe((data: any) => {
       this.listChannels = this.parseChannels(data);
-      console.log(this.listChannels);
       this.cdr.markForCheck();
     });
   }

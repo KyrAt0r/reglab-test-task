@@ -5,7 +5,7 @@ import {MatButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatList, MatListItem} from '@angular/material/list';
 import {RouterLink} from '@angular/router';
-import type {ListSource} from '@interfaces/list-source';
+import {ListSource} from '@interfaces/list-source';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 
 @Component({

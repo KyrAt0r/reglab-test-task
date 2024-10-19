@@ -8,13 +8,14 @@ import {MatInputModule} from '@angular/material/input';
 import {ActivatedRoute} from '@angular/router';
 import {Message} from '@interfaces/message';
 import {User} from '@interfaces/user';
+import {ChannelService} from '@services/channel.service';
 import {ChatService} from '@services/chat.service';
 import {UserService} from '@services/user.service';
 import {ButtonModule} from 'primeng/button';
 import {IconFieldModule} from 'primeng/iconfield';
 import {InputGroupModule} from 'primeng/inputgroup';
 import {InputTextModule} from 'primeng/inputtext';
-import {Observable, Subscription} from 'rxjs';
+import {Subscription} from 'rxjs';
 
 interface MessageForRender {
   id: number;
@@ -48,8 +49,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   currentUser!: User;
   pollingSubscription!: Subscription;
   channelId!: number;
-
-  messagesForRender$!: Observable<MessageForRender[]>;
+  channelName!: string;
 
   private createMessageForm(): FormGroup {
     return this.fb.group({
@@ -60,6 +60,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   constructor(
     private chatService: ChatService,
     private userService: UserService,
+    private channelService: ChannelService,
     private fb: FormBuilder,
     private route: ActivatedRoute
   ) {
@@ -71,6 +72,7 @@ export class ChatComponent implements OnInit, OnDestroy {
     this.route.queryParams.subscribe(params => {
       this.channelId = +params['channelId'];
     });
+    this.getChannelNames();
     this.startLongPollingMessages();
   }
 
@@ -126,5 +128,11 @@ export class ChatComponent implements OnInit, OnDestroy {
 
   generateMessageId(): number {
     return Date.now() + Math.floor(Math.random() * 1000);
+  }
+
+  getChannelNames(): void {
+    this.channelService.getChannelsById(this.channelId).subscribe(channel => {
+      this.channelName = channel.name;
+    })
   }
 }

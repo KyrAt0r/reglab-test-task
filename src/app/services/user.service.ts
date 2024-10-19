@@ -16,8 +16,12 @@ export class UserService {
     return this.http.get<User[]>(this.apiUrl);
   }
 
-  getUser(){
+  getUser(): User {
     const authenticatedUser = sessionStorage.getItem('authenticatedUser');
     return  authenticatedUser ? JSON.parse(authenticatedUser) : [];
+  }
+
+  updateUser(id: number, user: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, user);
   }
 }

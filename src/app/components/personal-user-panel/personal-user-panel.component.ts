@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import { MatFabButton, MatIconButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import {User} from '@interfaces/user';
@@ -24,16 +24,14 @@ import {AuthService} from '@services/auth.service';
   ],
 })
 export class PersonalUserPanelComponent implements OnInit {
-  user: User;
+  user!: User;
+  private authService = inject(AuthService);
+  private userService = inject(UserService);
 
-  constructor(private authService: AuthService,  private userService: UserService) {
+  ngOnInit(): void {
     this.user = this.userService.getUser();
-    console.log(this.user)
   }
 
-  ngOnInit(): void {}
-
-  // Метод для выхода из системы
   logout(): void {
     this.authService.logout();
   }

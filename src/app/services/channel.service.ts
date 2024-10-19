@@ -15,4 +15,9 @@ export class ChannelService {
   getChannels(): Observable<Channel[]> {
     return this.http.get<Channel[]>(this.apiUrl);
   }
+
+  getChannelsById(id: number): Observable<Channel> {
+    return this.http.get<Channel>(`${this.apiUrl}/${id}`);
+  }
+
 }
