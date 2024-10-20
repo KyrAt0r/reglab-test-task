@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import {Message} from '@interfaces/message';
 
 import type {Observable} from 'rxjs';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatService {
-  private apiUrl = 'http://localhost:3000/messages';
+  private readonly apiUrl = `${environment.apiUrl}/messages`;
 
   constructor(private http: HttpClient) {}
 

@@ -10,7 +10,7 @@
       "id": 1,
       "username": "ivan",
       "password": "пароль1",
-      "is_online": true
+      "is_online": false
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "id": 3,
       "username": "sergey",
       "password": "пароль3",
-      "is_online": true
+      "is_online": false
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "id": 5,
       "username": "nikolay",
       "password": "пароль5",
-      "is_online": true
+      "is_online": false
     }
   ],
   "channels": [
@@ -53,6 +53,30 @@
     {
       "id": 4,
       "name": "Новости"
+    },
+    {
+      "id": 1729379786929,
+      "name": "Тестовый канал"
+    },
+    {
+      "id": 1729379976039,
+      "name": "123"
+    },
+    {
+      "id": 1729380101539,
+      "name": "21412"
+    },
+    {
+      "id": 1729380366883,
+      "name": "nrrn"
+    },
+    {
+      "id": 1729380530146,
+      "name": "Новый канал"
+    },
+    {
+      "id": 1729380812416,
+      "name": "rer"
     }
   ],
   "messages": [
@@ -181,6 +205,12 @@
       "from_user": 1,
       "channel_id": 1,
       "content": "Как дела у всез"
+    },
+    {
+      "id": 1729380543145,
+      "from_user": 1,
+      "channel_id": 1729380530146,
+      "content": "Всем привет, всем пока"
     }
   ],
   "user_channels": [
@@ -223,6 +253,33 @@
     {
       "user_id": 5,
       "channel_id": 3
+    },
+    {
+      "id": "8e4b",
+      "user_id": 1
+    },
+    {
+      "id": "ec0d",
+      "user_id": 1
+    },
+    {
+      "id": "b5e8",
+      "user_id": 1
+    },
+    {
+      "id": "2f84",
+      "user_id": 1,
+      "channel_id": 1729380366883
+    },
+    {
+      "id": "be95",
+      "user_id": 1,
+      "channel_id": 1729380530146
+    },
+    {
+      "id": "37df",
+      "user_id": 1,
+      "channel_id": 1729380812416
     }
   ]
 }

@@ -30,7 +30,7 @@ describe('ChannelService', () => {
       { id: 2, name: 'Канал 2' }
     ];
 
-    service.getChannels().subscribe(channels => {
+    service.getAllChannels().subscribe(channels => {
       expect(channels.length).toBe(2);
       expect(channels).toEqual(mockChannels);
     });
@@ -41,7 +41,7 @@ describe('ChannelService', () => {
   });
 
   it('должен получать канал по id', () => {
-    const mockChannel: Channel = { id: 1, name: 'Канал 1' };
+    const mockChannel: Channel[] = [{ id: 1, name: 'Канал 1' }];
 
     service.getChannelsById(1).subscribe(channel => {
       expect(channel).toEqual(mockChannel);

@@ -1,0 +1,16 @@
+<form [formGroup]="userForm" (ngSubmit)="inviteUser()">
+  <p-multiSelect
+    formControlName="selectedUsers"
+    [options]="users"
+    optionLabel="username"
+    placeholder="Выбирите пользователей"
+  />
+
+  <button
+    type="submit"
+    pButton
+    label="Пригласить выбранных"
+    icon="pi pi-plus"
+    [disabled]="userForm.invalid"
+  ></button>
+</form>

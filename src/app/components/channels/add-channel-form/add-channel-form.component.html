@@ -1,0 +1,5 @@
+<form [formGroup]="channelForm" (ngSubmit)="addChannel()">
+  <label for="name">Название канала:</label>
+  <input id="name" formControlName="name" pInputText/>
+  <button type="submit" pButton label="Создать канал" icon="pi pi-plus" [disabled]="channelForm.invalid"></button>
+</form>

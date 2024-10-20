@@ -3,19 +3,15 @@ import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {User} from '@interfaces/user';
 import {map, Observable} from 'rxjs';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private authenticated = false;
-  private apiUrl = 'http://localhost:3000/users';
+  private readonly apiUrl = `${environment.apiUrl}/users`;
 
   constructor(private http: HttpClient, private router: Router) {
-    const storedUser = sessionStorage.getItem('authenticatedUser');
-    if (storedUser) {
-      this.authenticated = true;
-    }
   }
 
   login(username: string, password: string): Observable<boolean> {
@@ -23,7 +19,7 @@ export class AuthService {
       map(users => {
         const user = users.find(u => u.username === username && u.password === password);
         if (user) {
-          sessionStorage.setItem('authenticatedUser', JSON.stringify(user));
+          this.storeAuthenticatedUser(user);
           return true;
         }
         return false;
@@ -32,11 +28,43 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    return !!sessionStorage.getItem('authenticatedUser');
+    return !!this.getStoredUser();
   }
 
-  logout() {
-    this.router.navigate(['/login']);
-    sessionStorage.removeItem('authenticatedUser');  // Удаляем информацию о пользователе
+  logout(): void {
+    const user = this.getStoredUser();
+    if (user) {
+
+      this.clearAuthenticatedUser();
+      this.router.navigate(['/login']);
+
+    } else {
+      this.router.navigate(['/login']);
+    }
+  }
+
+  // private setUserOnlineStatus(userId: number, isOnline: boolean): Observable<void> {
+  //   const storedUser = this.getStoredUser();
+  //
+  //   if (storedUser) {
+  //     storedUser.is_online = isOnline;
+  //
+  //     return this.http.put<void>(`${this.apiUrl}/?id=${userId}`, storedUser);
+  //   }
+  //
+  //   return of(undefined);
+  // }
+
+  private storeAuthenticatedUser(user: User): void {
+    sessionStorage.setItem('authenticatedUser', JSON.stringify(user));
+  }
+
+  private getStoredUser(): User | null {
+    const storedUser = sessionStorage.getItem('authenticatedUser');
+    return storedUser ? JSON.parse(storedUser) : null;
+  }
+
+  private clearAuthenticatedUser(): void {
+    sessionStorage.removeItem('authenticatedUser');
   }
 }

@@ -1,0 +1,13 @@
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+.chat-title {
+  display: flex;
+  align-items: center;
+}
+
