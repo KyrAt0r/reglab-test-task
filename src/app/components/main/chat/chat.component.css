@@ -1,0 +1,46 @@
+.chanel-header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(26, 28, 30, 0.72);
+  color: white;
+}
+
+.channel-container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  color: white;
+}
+
+.messages {
+  flex-grow: 1;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  height: calc(100vh - 150px);
+  width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.message {
+  padding: 5px 0;
+}
+
+.new-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}

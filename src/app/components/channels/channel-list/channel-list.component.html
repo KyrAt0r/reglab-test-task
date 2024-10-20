@@ -1,0 +1,10 @@
+<div class="label">Каналы</div>
+<ng-container *ngIf="listChannels$ | async as listChannels">
+  <ng-template [ngIf]="listChannels.length > 0">
+    <app-list [items]="listChannels" [interact]="true"></app-list>
+  </ng-template>
+  <ng-template [ngIf]="listChannels.length === 0">
+    <div>У вас пока нет чатов</div>
+  </ng-template>
+</ng-container>
+<app-add-channel (dialogClosed)="onDialogClosed($event)"></app-add-channel>

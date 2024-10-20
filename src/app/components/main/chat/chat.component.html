@@ -1,0 +1,22 @@
+<div class="chanel-header">
+  <app-chat-header [chatTitle]="channelName"></app-chat-header>
+</div>
+<div class="channel-container-content">
+  <div class="messages">
+    <div>
+      <div *ngFor="let message of messagesForRender" class="message">
+        <strong>{{ message.from_user }}:</strong> {{ message.content }}
+      </div>
+    </div>
+  </div>
+  <div class="new-message">
+    <form [formGroup]="messageForm" (ngSubmit)="sendMessage()">
+      <p-iconField iconPosition="right" class="full-width">
+        <p-inputGroup class="full-width">
+          <input type="text" pInputText formControlName="content" placeholder="Написать в"/>
+          <button type="submit" pButton icon="pi pi-send" [disabled]="messageForm.invalid"></button>
+        </p-inputGroup>
+      </p-iconField>
+    </form>
+  </div>
+</div>

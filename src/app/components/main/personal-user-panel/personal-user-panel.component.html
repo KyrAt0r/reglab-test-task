@@ -1,0 +1,19 @@
+<section class="user-panel-container">
+  <div class="user-panel-header">
+    <div class="user-avatar">
+      <p-avatar
+        icon="pi pi-user"
+        styleClass="mr-2"
+        size="normal"
+        [style]="{ 'background-color': '#ece9fc', color: '#2a1261' }"
+        shape="circle" />
+    </div>
+    <div class="user-info">{{ user.username }}</div>
+  </div>
+
+  <div class="user-panel-buttons">
+    <p-button icon="pi pi-cog" [rounded]="true" [text]="true" (onClick)="goToUserPage()"/>
+    <p-button icon="pi pi-sign-out" [rounded]="true" [text]="true" severity="danger" (onClick)="logout()"/>
+  </div>
+
+</section>

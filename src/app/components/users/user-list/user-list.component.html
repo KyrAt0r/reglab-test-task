@@ -1,0 +1,10 @@
+<div class="label">Пользователи</div>
+<ng-container *ngIf="listUsers$ | async as listUsers">
+  <ng-template [ngIf]="listUsers.length > 0">
+    <app-list [items]="listUsers"></app-list>
+  </ng-template>
+  <ng-template [ngIf]="listUsers.length === 0">
+    <div>Пользователей пока нет</div>
+  </ng-template>
+</ng-container>
+<app-invite-user (dialogClosed)="onDialogClosed()"></app-invite-user>

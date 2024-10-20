@@ -1,0 +1,37 @@
+<div class="user-profile">
+  <button pButton icon="pi pi-arrow-left" (click)="goBack()" class="p-button-text" label="Назад"></button>
+  <h2>Личная страница пользователя</h2>
+  <form [formGroup]="userForm" (ngSubmit)="updateUser()">
+    <div class="p-field form-group">
+      <label for="username">Логин</label>
+      <input
+        pInputText
+        type="text"
+        id="username"
+        formControlName="username"
+        class="form-control"
+        required
+      />
+      <div *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched" class="error-message">
+        Логин обязателен.
+      </div>
+    </div>
+
+    <div class="p-field form-group">
+      <label for="password">Пароль</label>
+      <input
+        pInputText
+        type="password"
+        id="password"
+        formControlName="password"
+        class="form-control"
+        required
+      />
+      <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched" class="error-message">
+        Пароль обязателен.
+      </div>
+    </div>
+
+    <button pButton type="submit" label="Сохранить изменения" class="btn btn-primary"></button>
+  </form>
+</div>

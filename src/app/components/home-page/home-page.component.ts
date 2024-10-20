@@ -7,10 +7,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIcon} from '@angular/material/icon';
 import {MatInput} from '@angular/material/input';
 import {MatList, MatListItem} from '@angular/material/list';
-import {ChannelListComponent} from '@components/channel-list/channel-list.component';
-import {ChatComponent} from '../chat/chat.component';
-import {SideBarComponent} from '../side-bar/side-bar.component';
-import {UserListComponent} from '../user-list/user-list.component';
+import {ChannelListComponent} from '@components/channels/channel-list/channel-list.component';
+import {ChatComponent} from '@components/main/chat/chat.component';
+import {SideBarComponent} from '@components/main/side-bar/side-bar.component';
+import {UserListComponent} from '@components/users/user-list/user-list.component';
+
 
 @Component({
   selector: 'app-home-page',

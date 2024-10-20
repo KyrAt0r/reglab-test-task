@@ -4,7 +4,8 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {MatButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatList, MatListItem} from '@angular/material/list';
-import type {ListSource} from '@interfaces/list-source';
+import {RouterLink} from '@angular/router';
+import {ListSource} from '@interfaces/list-source';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 
 @Component({
@@ -21,7 +22,8 @@ import {ScrollPanelModule} from 'primeng/scrollpanel';
     NgForOf,
     ScrollingModule,
     ScrollPanelModule,
-    NgClass
+    NgClass,
+    RouterLink
   ],
 })
 export class ListComponent {

@@ -2,39 +2,39 @@
   "users": [
     {
       "id": 0,
-      "login": "test",
+      "username": "test",
       "password": "test",
       "is_online": true
     },
     {
       "id": 1,
-      "login": "ivan",
+      "username": "ivan",
       "password": "пароль1",
-      "is_online": true
+      "is_online": false
     },
     {
       "id": 2,
-      "login": "anna",
+      "username": "anna",
       "password": "пароль2",
       "is_online": false
     },
     {
       "id": 3,
-      "login": "sergey",
+      "username": "sergey",
       "password": "пароль3",
-      "is_online": true
+      "is_online": false
     },
     {
       "id": 4,
-      "login": "maria",
+      "username": "maria",
       "password": "пароль4",
       "is_online": false
     },
     {
       "id": 5,
-      "login": "nikolay",
+      "username": "nikolay",
       "password": "пароль5",
-      "is_online": true
+      "is_online": false
     }
   ],
   "channels": [
@@ -53,6 +53,30 @@
     {
       "id": 4,
       "name": "Новости"
+    },
+    {
+      "id": 1729379786929,
+      "name": "Тестовый канал"
+    },
+    {
+      "id": 1729379976039,
+      "name": "123"
+    },
+    {
+      "id": 1729380101539,
+      "name": "21412"
+    },
+    {
+      "id": 1729380366883,
+      "name": "nrrn"
+    },
+    {
+      "id": 1729380530146,
+      "name": "Новый канал"
+    },
+    {
+      "id": 1729380812416,
+      "name": "rer"
     }
   ],
   "messages": [
@@ -103,6 +127,90 @@
       "from_user": 5,
       "channel_id": 3,
       "content": "Я смотрел фильм, очень советую!"
+    },
+    {
+      "id": 1729243239908,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "Очень ооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооооочень длинное сообщение"
+    },
+    {
+      "id": 1729243816925,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "43242"
+    },
+    {
+      "id": 1729243819979,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "423423"
+    },
+    {
+      "id": 1729244755337,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "432423"
+    },
+    {
+      "id": 1729244780483,
+      "from_user": 0,
+      "channel_id": 3,
+      "content": "О я тоже видел его"
+    },
+    {
+      "id": 1729244795464,
+      "from_user": 0,
+      "channel_id": 4,
+      "content": "Нет!!! Вчера"
+    },
+    {
+      "id": 1729245393026,
+      "from_user": 0,
+      "channel_id": 4,
+      "content": "4"
+    },
+    {
+      "id": 1729245615433,
+      "from_user": 0,
+      "channel_id": 1,
+      "content": "ку"
+    },
+    {
+      "id": 1729245618061,
+      "from_user": 0,
+      "channel_id": 4,
+      "content": "кукук"
+    },
+    {
+      "id": 1729245673842,
+      "from_user": 2,
+      "channel_id": 3,
+      "content": " оп оп тестируем сообщения"
+    },
+    {
+      "id": 1729245687325,
+      "from_user": 0,
+      "channel_id": 3,
+      "content": "Всё класс, вижу прекрстно"
+    },
+    {
+      "id": 1729269552227,
+      "from_user": 1,
+      "channel_id": 1,
+      "content": "re"
+    },
+    {
+      "id": 1729269556072,
+      "from_user": 1,
+      "channel_id": 1,
+      "content": "Как дела у всез"
+    },
+    {
+      "id": 1729380543145,
+      "from_user": 1,
+      "channel_id": 1729380530146,
+      "content": "Всем привет, всем пока"
     }
   ],
   "user_channels": [
@@ -145,6 +253,33 @@
     {
       "user_id": 5,
       "channel_id": 3
+    },
+    {
+      "id": "8e4b",
+      "user_id": 1
+    },
+    {
+      "id": "ec0d",
+      "user_id": 1
+    },
+    {
+      "id": "b5e8",
+      "user_id": 1
+    },
+    {
+      "id": "2f84",
+      "user_id": 1,
+      "channel_id": 1729380366883
+    },
+    {
+      "id": "be95",
+      "user_id": 1,
+      "channel_id": 1729380530146
+    },
+    {
+      "id": "37df",
+      "user_id": 1,
+      "channel_id": 1729380812416
     }
   ]
 }
